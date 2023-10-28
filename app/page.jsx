@@ -7,7 +7,7 @@ export default function Home() {
 
   useEffect(() => {
 
-    fetch('/api/quote')
+    fetch('/api/localquote')
       .then(res => res.json())
       .then(json => {
         setquote(json)
