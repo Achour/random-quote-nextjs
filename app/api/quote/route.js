@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 export async function GET(req, res) {
   const respo = await fetch("https://api.api-ninjas.com/v1/quotes", {
-    cache: "no-store",
     next: { revalidate: 0 },
     method: "GET",
     headers: { "X-Api-Key": process.env.API_KEY },
