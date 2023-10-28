@@ -7,7 +7,7 @@ export default function Home() {
 
   useEffect(() => {
 
-    fetch('/api/quote', { cache: 'no-store', next: { revalidate: 0 }, })
+    fetch('/api/quote')
       .then(res => res.json())
       .then(json => {
         setquote(json)
