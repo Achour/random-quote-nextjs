@@ -10,3 +10,5 @@ export async function GET(req, res) {
   const json = await respo.json();
   return NextResponse.json(json);
 }
+
+export const revalidate = 0;
