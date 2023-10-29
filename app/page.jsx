@@ -7,11 +7,7 @@ export default function Home() {
 
   useEffect(() => {
 
-    fetch('https://api.api-ninjas.com/v1/quotes', {
-      method: "GET",
-      headers: { "X-Api-Key": 'dLO0a5sAB5jG2zCH0tYoxg==YHaRLHBejxrCPs2S' },
-      contentType: "application/json",
-    })
+    fetch('/api/quote')
       .then(res => res.json())
       .then(json => {
         setquote(json)
